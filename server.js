@@ -7,8 +7,8 @@ const mongoose = require('mongoose');
 const cors = require("cors");
 const instance = express();
 const mongoStore = require('connect-mongo');
-const port = 3001;
-const connectionString = "mongodb://127.0.0.1:27017/assessmenttask3";
+const port = 443;
+const connectionString = "mongodb+srv://smuttified:9oborTQUqlOw0CsT@alec.0exvoj9.mongodb.net/alec";
 
 exports.instance = instance;
 exports.mongoose = mongoose;
@@ -21,7 +21,7 @@ instance.use(function (req, res, next) {
 instance.use(bodyParser.urlencoded({ extended: true }));
 instance.use(bodyParser.json());
 instance.use(expressSession({
-    secret: "secret",
+    secret: "9oborTQUqlOw0CsT",
     store: mongoStore.create({ mongoUrl: connectionString }),
     resave: false,
     saveUninitialized: true,
